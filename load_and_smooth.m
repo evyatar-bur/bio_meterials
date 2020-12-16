@@ -8,8 +8,8 @@ raw_data = {f(:,1:2),f(:,4:5),f(:,7:8)};
 clean_data = raw_data;
 
 for i = 1:3
-    clean_data{i}(:,2) = smoothdata(raw_data{i}(:,2));
+    clean_data{1,i}(:,2) = smoothdata(raw_data{1,i}(:,2));
 end
 
-close(f)
+
 end
