@@ -1,9 +1,7 @@
 function [UTS] = find_UTS(signal)
-%UNTITLED6 Summary of this function goes here
-%   Detailed explanation goes here
+% find_UTS finds the stress and strain values at the UTS point of the given signal
 
 [~,UTS_ind] = max(signal(:,2));
-
 UTS = signal(UTS_ind,:);
 
 end

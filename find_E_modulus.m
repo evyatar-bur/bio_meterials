@@ -5,10 +5,14 @@ function [E_modulus, yield] = find_E_modulus(signal)
 % to find the end of the elastic range we use diff to evaluate the second derivative 
 sec_der = diff(diff(signal(:,2)));
 
+
 % Index of the yeild point
 yield_ind = find(abs(sec_der) > 1, 1 )+ 1;
-
 yield = signal(yield_ind,:);
+
+
+% At the elastic range : E = stress/strain
+% We use the yield point to calculate E modulus
 E_modulus = yield(1,2)/yield(1,1);
     
     
