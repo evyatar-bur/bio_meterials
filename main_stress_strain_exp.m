@@ -51,13 +51,7 @@ title('Stress-Strain curve - data set 3')
 % Read data from the sheet
 part3_data = xlsread('נתונים חלק ג.xlsx');
 
-
+figure(4)
 [strain_difference] = stretch_and_release(part3_data,0.233);
-
-
-
-
-
-
 
 
